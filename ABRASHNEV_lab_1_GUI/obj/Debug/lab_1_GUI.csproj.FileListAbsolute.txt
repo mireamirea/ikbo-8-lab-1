@@ -1,0 +1,8 @@
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\obj\Debug\lab_1_GUI.csprojResolveAssemblyReference.cache
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\bin\Debug\lab_1_GUI.exe.config
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\bin\Debug\lab_1_GUI.exe
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\bin\Debug\lab_1_GUI.pdb
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\obj\Debug\lab_1_GUI.exe
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\obj\Debug\lab_1_GUI.pdb
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\obj\Debug\lab_1_GUI.MainForm.resources
+C:\Users\Nikita\Documents\SharpDevelop Projects\lab_1_GUI\lab_1_GUI\obj\Debug\lab_1_GUI.csproj.GenerateResource.Cache
