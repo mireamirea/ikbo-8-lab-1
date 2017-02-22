@@ -1,4 +1,4 @@
-//Kolyandra
+/*Kolyandra*/
 #include <stdio.h>
 #include <stdlib.h>
 
