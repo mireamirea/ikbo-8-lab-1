@@ -13,7 +13,7 @@ struct packet {
 int main(int argc, char *argv[]) {
     FILE *f;
     int i = 0;
-    char *path[255];
+    char path[255];
     struct packet pk;
     if (!(f = fopen(argv[1],"r+b")) || argc == 1){
     	printf("Enter file name or path");
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         printf("%d  %s  %f\n",pk.x,pk.str,pk.flnum);
         i++;
     }
-    printf ("Size of file: %d",i*sizeof(struct packet));
+    printf ("Size of file: %zd",i*sizeof(struct packet));
     fclose(f);
     return i;
 }
