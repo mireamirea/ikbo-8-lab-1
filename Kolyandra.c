@@ -14,10 +14,7 @@ int main(int argc, char *argv[]) {
     FILE *f;
     int i = 0;
     struct packet pk;
-    if(argc != 2) {
-        printf("Write patch to the file\n");
-        exit(1);
-    }
+    
     if (!(f = fopen(argv[1],"r+b"))){
         printf("Error");
         return -1;
