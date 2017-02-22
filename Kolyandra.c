@@ -15,9 +15,9 @@ int main(int argc, char *argv[]) {
     int i = 0;
     char path[255];
     struct packet pk;
-    path = argv[1];
-    while (!(f = fopen(path,"r+b"))){
+    while (!(f = fopen(argv[1],"r+b"))){
     	printf("Enter file name or path");
+    	scanf("%s",&path);
     	f = fopen(path,"r+b");
    		}
     while (fread(&pk, sizeof(struct packet),1,f)){
