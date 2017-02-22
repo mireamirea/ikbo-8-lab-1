@@ -13,12 +13,13 @@ struct packet {
 int main(int argc, char *argv[]) {
     FILE *f;
     int i = 0;
+    char *path[255];
     struct packet pk;
-    
-    if (!(f = fopen(argv[1],"r+b"))){
-        printf("Error");
-        return -1;
-    }
+    f = fopen(argv[1],"r+b")
+    if (!f){
+    	printf("Enter file name or path");
+    	f = fopen(path,"r+b");
+   		}
     while (fread(&pk, sizeof(struct packet),1,f)){
         printf("%d  %s  %f\n",pk.x,pk.str,pk.flnum);
         i++;
