@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h> //из-за отсутствия подключения к стринг, которое ты мне советовал убрать вообще, у тебя и не заработала предыдущая версия
 
 struct _file {
     int inum;
