@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h> //из-за отсутствия подключения к стринг, которое ты мне советовал убрать вообще, у тебя и не заработала предыдущая версия
+
+#define PATH argv[1]
 
 struct _file {
     int inum;
@@ -11,15 +12,13 @@ struct _file {
 int main(int argc, const char * argv[]) {
     struct _file rf;
     char fpath[255];
-    FILE *f;
+    FILE *f = fopen(PATH, "r+b");
     while(f == NULL){
-    if (argc != 2){
-    printf("Enter file name or file path\n");
-    fgets(fpath, 255, stdin);
-    fpath[strlen(fpath)-1] = 0;
-    if ((f = fopen(fpath, "r+b")) == NULL) perror ("Error 228");
-   }else if ((f = fopen(argv[2], "r+b")) == NULL) perror ("Error 228");
+      printf("Enter file name or file path\n");
+      scanf("%s", fpath);
+    if ((f = fopen(fpath, "r+b")) == NULL) perror ("Error");
     }
+    
     int i = 0;
     while (!feof(f)) {
         fread(&rf, sizeof(rf), 1, f);
