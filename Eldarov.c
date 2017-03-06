@@ -25,6 +25,7 @@ int main(int argc, char** argv)
     if (!(f = fopen(argv[1], "rb")))
     {
         printf("File don't exist\n");
+        return 0;
     }
 
     int i = 0;
