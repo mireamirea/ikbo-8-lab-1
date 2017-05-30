@@ -1,54 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <malloc.h>
 
-#define MAX 255
+int main(int argc, char *argv[]){
 
+struct stc  {
+int n;
+char s[255];
+float f; } str;
 
+char array [50];
+FILE *file;
+file=fopen(argv[1], "rb");
 
-int main(int argc, char **argv) {
+while (file == NULL){
+printf(" Enter the name of file:  ");
+scanf("%s", array);
+file=fopen(array, "rb");
+}
 
-    
-    struct {
-        int num;
-        char string[MAX];
-        float fnum;
-    } rFile;
-    
-    FILE *f;
-    char array[MAX];
+int FileSize =0;
 
-    if ( argc != 2 || ((f = fopen(argv[1], "rb")) == NULL) ) {
-    	printf("Enter the path to the file\n");
+while (fread(&str, sizeof(struct stc), 1, file))
+{
+printf("%d\t %s\t %f\t\n",str.n, str.s, str.f);
+FileSize=FileSize+sizeof(struct stc);
+}
 
-    	while (1) {
-    		scanf("%s", array);
-    		if ((f = fopen(array, "r+b")) != NULL) 
-			break;
-
-            
-    		else printf("Wrong name\n");
-    	}
-
-    }
-
-
-   
-    int i = 0;
-
-    while(!feof(f)) {
-
-        fread(&rFile, sizeof(rFile), 1, f);
-        printf("%d %s %f\n", rFile.num, rFile.string, rFile.fnum);
-
-        i++;
-    }
-
-    
-    fseek(f,0,SEEK_END);
-    printf("Elements count: %d\n", i - 1);
-    printf("File size: %ld\n bytes", ftell(f));
-	fclose(f);
-    
-    return 0;
-}	 		 	 	  		 	 	 	 	  																																																																																																																										
+fclose(file);
+printf("File size: %d bytes", FileSize);
+return 0;
+}	 	 	  		 	 	 	 	  																																																																																																																										
