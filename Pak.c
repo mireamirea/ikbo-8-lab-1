@@ -15,20 +15,20 @@ int main(int argc, const char * argv[]){
     x * y = malloc(sizeof(x));
     if (argc != 2)
     {
-        printf("need args\n");
+        printf("Where args? I need Args!\n");
         return 0;
     }
 
 
     if ((file = fopen(argv[1], "r+b"))== NULL)
     {
-        printf("file does not exist\n");
+        printf("No file\n");
         return 0;
     }
 
 /*if ((file = fopen("Users/Àíòîí/Desktop/data.DAT", "r+b")== NULL)
       {
-      printf("file does not exist\n");
+      printf("No file\n");
         return 0;
       }*/
 
