@@ -28,5 +28,5 @@ int main(int argc, char *argv[]) {
     }
     printf ("SizeF: %zd",f*sizeof(struct packet));
     fclose(FILE);
-    return f;
+    return 0;
 }
