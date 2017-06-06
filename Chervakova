@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+#define SIZE 1500
+int main( int argc, char* argv[])
+{
+    setlocale(LC_ALL, "Rus");
+    struct koll
+    {
+        int bal;
+        char k[255 ];
+        float c;
+    } L ;
+    int i=0;
+    char way[255];
+    FILE *fo;
+
+    if((fo = fopen( argv[1],"rb")) == NULL)
+    {
+        printf("Error ");
+        while(fo==NULL)
+        {
+            printf("Oщибка\n");
+            printf("Введите путь:\n");
+            scanf("%s",way);
+            fo = fopen( way,"rb");
+        }
+        printf("%s%20s%40s\n","Число","Строка","число");
+        while (fread( &L, sizeof(struct koll), 1, fo))
+        {
+
+            printf(" %d  %s  %f \n",L.bal,L.k,L.c);
+
+            i++;
+        }
+        printf("%d",sizeof( struct koll)*i);
+
+        fclose(fo);
+    }
+    else
+    {
+        printf("%s%20s%40s\n","Число","Строка","число");
+        while (fread( &L, sizeof(struct koll), 1, fo))
+        {
+
+            printf(" %d  %s  %f \n",L.bal,L.k,L.c);
+
+            i++;
+        }
+        printf("%d",sizeof( struct koll)*i);
+
+        fclose(fo);
+    }
+
+    return 0;
+}
