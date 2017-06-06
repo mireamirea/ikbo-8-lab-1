@@ -4,12 +4,12 @@ struct panda{
 	int intnum;
 	char array[255];
 	float floatnum;
-};
+}; 
 
 int main(int argc, char *argv[]){
 	struct panda milota;
 	int i;
-	FILE *f = NULL;
+	FILE *f;
 	char filename[100];
 	f=fopen(argv[1], "rb");
 	while (f == NULL){
